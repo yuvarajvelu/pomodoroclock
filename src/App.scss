@@ -1,0 +1,99 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #FBD38D;
+    color: black;
+    font-family: cursive;
+}
+button {
+  border: 0px;
+  background-color: #FBD38D;
+  outline: none;
+  cursor: pointer;
+}
+#pomodoro-clock {
+  display: grid;
+  
+  justify-content: space-evenly;
+  grid-template-areas: "heading heading"
+                        "break sesion"
+                        "timer timer";                    
+}
+.heading {
+  grid-area: heading;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 52px;
+}
+#break {
+  grid-area: break;
+  display: grid;
+  grid-template-areas: "top top top"
+                        "left mid right";
+  grid-column-gap: 0px;                      
+  #break-label {
+      grid-area: top;
+      text-align: center;
+  }
+  #break-decrement {
+      grid-area: left;
+      font-size: 25px;
+  }
+  #break-increment {
+      grid-area: right;
+      font-size: 25px;
+  }
+  #break-length {
+      grid-area: mid;
+      text-align: center;
+      font-size: 25px;
+  }
+}
+#session {
+  grid-area: sesion; 
+  display: grid;
+  
+  grid-template-areas: "top top top"
+                        "left mid right";
+    grid-column-gap: 0px;                       
+    #session-label {
+      grid-area: top;
+      text-align: center;
+  }
+  #session-decrement {
+      grid-area: left;
+      font-size: 25px;
+  }
+  #session-increment {
+      grid-area: right;
+      font-size: 25px;
+  }
+  #session-length {
+      grid-area: mid;
+      text-align: center;
+      font-size: 25px;
+  }                     
+}
+.timer {
+  grid-area: timer; 
+  #timer-label {
+    font-size: 32px;
+    text-align: center;
+  } 
+  #time-left {
+    text-align: center;
+  }   
+  #start_stop, #reset {
+    font-size: 35px;
+  }                
+}
+.display {
+  border: 2px solid black;
+  border-radius: 30px;
+}
+#options {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
