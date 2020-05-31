@@ -58,6 +58,10 @@ class App extends React.Component {
   }
   handleReset() {
     clearInterval(timerclock);
+    this.setState({
+      breaklen : 5,
+      sessionlen : 25
+    })
     $(".display").css("color","black");
     $(".display").css("border","2px solid black")
     $("#time-left").text("25:00");
