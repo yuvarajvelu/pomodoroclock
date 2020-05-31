@@ -58,10 +58,6 @@ class App extends React.Component {
   }
   handleReset() {
     clearInterval(timerclock);
-    this.setState({
-      breaklen : 5,
-      sessionlen : 25
-    })
     $(".display").css("color","black");
     $(".display").css("border","2px solid black")
     $("#time-left").text("25:00");
@@ -81,10 +77,6 @@ class App extends React.Component {
     if(c==="fa fa-play") {
       $(".change").prop("disabled",true);
       $("#play-pause").removeClass("fa-play").addClass("fa-pause");
-      this.setState({
-        breaklen: b,
-        sessionlen: a
-      })
       let seslen;
       if(len==="") {
         seslen = this.state.sessionlen + "00";
