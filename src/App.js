@@ -81,6 +81,10 @@ class App extends React.Component {
     if(c==="fa fa-play") {
       $(".change").prop("disabled",true);
       $("#play-pause").removeClass("fa-play").addClass("fa-pause");
+      this.setState({
+        breaklen: b,
+        sessionlen: a
+      })
       let seslen;
       if(len==="") {
         seslen = this.state.sessionlen + "00";
